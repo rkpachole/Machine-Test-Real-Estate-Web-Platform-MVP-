@@ -6,7 +6,7 @@ It demonstrates property listings, role-based dashboards, protected routes, and 
 
 ---
 
-## 🛠 Tech Stack
+## Tech Stack
 - React JS (Functional Components)
 - Vite
 - React Router DOM
@@ -16,7 +16,7 @@ It demonstrates property listings, role-based dashboards, protected routes, and 
 
 ---
 
-## ▶️ How to Run the Project
+## How to Run the Project
 ```bash
 npm install
 npm run dev
