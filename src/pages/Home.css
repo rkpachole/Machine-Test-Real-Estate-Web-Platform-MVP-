@@ -1,0 +1,278 @@
+/* =========================
+   GENERAL STYLES
+========================= */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f5f5f5;
+  color: #333;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* =========================
+   HEADER
+========================= */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px;
+  background-color: #1976d2;
+  color: #fff;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.header .logo {
+  font-size: 1.6rem;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+}
+
+.header .logo i {
+  margin-right: 8px;
+  font-size: 1.8rem;
+}
+
+.header nav a {
+  margin-right: 20px;
+  color: white;
+  font-weight: 500;
+}
+
+.header nav a:hover {
+  text-decoration: underline;
+}
+
+.header button {
+  padding: 6px 14px;
+  background-color: #fff;
+  color: #1976d2;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-left: 5px;
+  font-weight: 500;
+}
+
+.header button:hover {
+  background-color: #e0e0e0;
+}
+
+/* =========================
+   HOME PAGE CONTAINER
+========================= */
+.home-container {
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
+
+/* =========================
+   HOME TITLE & SUBTITLE
+========================= */
+.home-container h1 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+  color: #1976d2;
+}
+
+.home-container p {
+  font-size: 1.1rem;
+  margin-bottom: 30px;
+  color: #555;
+}
+
+/* =========================
+   LOGIN BUTTONS (ON HOME)
+========================= */
+.home-container .login-btn {
+  padding: 10px 20px;
+  background-color: #1976d2;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  margin-right: 10px;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.home-container .login-btn:hover {
+  background-color: #125aa0;
+}
+
+/* =========================
+   SEARCH BAR (PLACEHOLDER)
+========================= */
+.search-bar {
+  display: flex;
+  margin-bottom: 30px;
+}
+
+.search-bar input {
+  flex: 1;
+  padding: 10px 15px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 4px 0 0 4px;
+  outline: none;
+}
+
+.search-bar button {
+  padding: 10px 15px;
+  font-size: 1rem;
+  border: none;
+  background-color: #1976d2;
+  color: white;
+  cursor: pointer;
+  border-radius: 0 4px 4px 0;
+}
+
+.search-bar button:hover {
+  background-color: #125aa0;
+}
+
+/* =========================
+   PROPERTY CARDS GRID
+========================= */
+.property-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 20px;
+}
+
+.property-card {
+  background-color: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0px 2px 10px rgba(0,0,0,0.1);
+  transition: transform 0.2s ease;
+}
+
+.property-card:hover {
+  transform: translateY(-5px);
+}
+
+.property-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.property-card .card-body {
+  padding: 15px;
+}
+
+.property-card .card-body h3 {
+  margin: 0;
+  font-size: 1.2rem;
+  color: #1976d2;
+}
+
+.property-card .card-body p {
+  margin: 5px 0;
+  color: #555;
+}
+
+.property-card .card-body button {
+  margin-top: 10px;
+  padding: 8px 12px;
+  border: none;
+  background-color: #1976d2;
+  color: #fff;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.property-card .card-body button:hover {
+  background-color: #125aa0;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .header nav {
+    margin-top: 10px;
+  }
+
+  .property-grid {
+    grid-template-columns: 1fr;
+  }
+}
+.property-card {
+  position: relative;
+  background: white;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  transition: transform 0.2s;
+  margin-bottom: 20px;
+}
+
+.property-card:hover {
+  transform: translateY(-5px);
+}
+
+.card-body {
+  padding: 10px 15px;
+  position: relative;
+}
+
+/* Heart Icon */
+.heart-icon {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 1.5rem;
+  cursor: pointer;
+  transition: transform 0.2s, color 0.2s;
+}
+
+.heart-icon:hover {
+  transform: scale(1.2);
+}
+
+.heart-icon.favorite {
+  color: red;
+}
+
+/* Schedule Visit */
+.schedule-visit {
+  margin-top: 10px;
+  display: flex;
+  gap: 5px;
+}
+
+.schedule-visit input[type="date"] {
+  padding: 6px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+}
+
+.schedule-visit button {
+  padding: 6px 10px;
+  border: none;
+  border-radius: 4px;
+  background-color: #1976d2;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.schedule-visit button:hover {
+  background-color: #125aa0;
+}
